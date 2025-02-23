@@ -10,7 +10,7 @@ public class Ordinazione implements Serializable {
 * prezzo complessivo, un riepilogo dell' ordinazione(piatti presenti e prezzo complessivo),invio effettivo dell' ordine
 * (nel programma esso consiste solo nella preparazione dei piatti richiesti e conseguente decremento delle quantità degli ingredienti utilizzati.
 */
-    private  ArrayList<Piatto> piatti=new ArrayList<>();
+    private final ArrayList<Piatto>  piatti=new ArrayList<>();
 
     public Ordinazione() {
         super();

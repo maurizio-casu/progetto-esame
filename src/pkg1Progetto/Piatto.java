@@ -10,10 +10,10 @@ public class Piatto implements  Comparable<Piatto>, Serializable {
      *e dai suoi attributi principali(nome,prezzo,ricetta).
      */
 
-    private String nome;
-    private String ricetta;
-    private double Prezzo_piatto;
-    private ArrayList<Ingrediente> ingredienti_piatto;
+    private final  String nome;
+    private final String ricetta;
+    private final double  Prezzo_piatto;
+    private final ArrayList<Ingrediente> ingredienti_piatto;
     public int[]quantita_ingredienti;
 
     public Piatto(String nome, String ricetta, double prezzo_piatto, ArrayList<Ingrediente> ingredienti_piatto, int[]quantita_ingredienti) {
@@ -54,7 +54,7 @@ public class Piatto implements  Comparable<Piatto>, Serializable {
     }
 
     public void preparaPiatto(){
-        int nova_quant;
+
         if(isDisponibile()) {
             for (int i = 0; i < ingredienti_piatto.size(); i++)
                 ingredienti_piatto.get(i).setQuantita(ingredienti_piatto.get(i).getQuantita() - quantita_ingredienti[i]);
